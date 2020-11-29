@@ -53,6 +53,9 @@ Structures-Wiz is a JavaScript based npm package for using awesome data structur
             - [removeAtHead](#ll-removeAtHead)
             - [removeAtTail](#ll-removeAtTail)
             - [print](#ll-print)
+            - [sort](#ll-sort)
+            - [getHead](#ll-getHead)
+            - [getTail](#ll-getTail)
 	
 - [Contribute](#contribute)
 - [License](#license)
@@ -692,6 +695,67 @@ linkedList.print(); // 5 -> 2 -> 15 -> NULL
 
 linkedList.addAtHead(9);
 linkedList.print(); //9 -> 5 -> 2 -> 15 -> NULL
+```
+
+#### sort() <a name="ll-sort"></a>
+Sorts the LinkedList.
+
+```javascript
+import { LinkedList } from 'structures-wiz';
+
+const linkedList = new LinkedList();
+
+linkedList.addAtHead(22);
+
+linkedList.addAtHead(5);
+
+linkedList.addAtTail(15);
+
+linkedList.print(); //5 -> 22 -> 15 -> NULL
+
+linkedList.sort();
+
+linkedList.print(); //5 -> 15 -> 22 -> NULL
+```
+
+#### getHead() <a name="ll-getHead"></a>
+Returns the head node of the LinkedList
+
+```javascript
+import { LinkedList } from 'structures-wiz';
+
+const linkedList = new LinkedList();
+
+linkedList.addAtHead(22);
+
+linkedList.addAtHead(5);
+
+linkedList.addAtTail(15);
+
+linkedList.print(); //5 -> 22 -> 15 -> NULL
+
+const currentHead = linkedList.getHead();
+console.log("Head Value:",currentHead.val);//Head Value: 5 
+```
+
+#### getTail() <a name="ll-getTail"></a>
+Returns the head node of the LinkedList
+
+```javascript
+import { LinkedList } from 'structures-wiz';
+
+const linkedList = new LinkedList();
+
+linkedList.addAtHead(22);
+
+linkedList.addAtHead(5);
+
+linkedList.addAtTail(15);
+
+linkedList.print(); //5 -> 22 -> 15 -> NULL
+
+const currentTail = linkedList.getTail();
+console.log("Tail Value:",currentHead.val);//Head Value: 15
 ```
 
 ## Contribute
